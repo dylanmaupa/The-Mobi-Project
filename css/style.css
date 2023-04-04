@@ -1,0 +1,635 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+  list-style: none;
+  font-family: "rennerRegular";
+}
+
+:root {
+  --black: #000;
+  --orange: #FF7F00;
+  --white: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "raleWaySemiBold";
+  gap: 10%;
+  padding: 40px 70px;
+}
+header .logo {
+  width: 15%;
+}
+header .logo img {
+  width: 100%;
+}
+header .menu {
+  display: none;
+  cursor: pointer;
+}
+header .menu .line {
+  width: 30px;
+  height: 4px;
+  margin-block: 5px;
+  border-radius: 10px;
+  background: var(--black);
+}
+header ul {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+header ul li a {
+  color: var(--black);
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+header ul li a svg {
+  width: 20px;
+}
+header ul li a:hover {
+  color: var(--orange);
+}
+header ul li .active {
+  font-family: "raleWayBold";
+  position: relative;
+  color: var(--orange);
+}
+header ul li .active::before {
+  content: "";
+  background: var(--orange);
+  width: 7px;
+  height: 7px;
+  display: block;
+  position: absolute;
+  left: -1rem;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 70px;
+  padding-left: 130px;
+}
+#hero h1 {
+  font-size: 80px;
+  font-family: "rennerBold";
+  line-height: 3cm;
+}
+#hero h1 span {
+  color: var(--orange);
+}
+#hero img {
+  width: 60%;
+}
+
+#about {
+  position: relative;
+  background: var(--black);
+  color: var(--white);
+  margin-top: 15%;
+  padding: 100px 0;
+  padding-left: 130px;
+}
+#about .about-card-1 {
+  background: var(--orange);
+  color: var(--black);
+  padding: 80px 60px;
+  width: 600px;
+  position: absolute;
+  top: -10rem;
+  left: 8.2rem;
+}
+#about .about-card-1 p:first-child {
+  font-size: 30px;
+  font-family: "rennerSemiBold";
+}
+#about .about-card-1 p:last-child {
+  margin-top: 40px;
+  font-family: "rennerLight";
+}
+#about .about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 100px;
+}
+#about .about-wrapper .about-card-2 {
+  margin-top: 19%;
+}
+#about .about-wrapper .about-card-2 p {
+  font-family: "rennerLight";
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+#about .about-wrapper .about-card-2 ul {
+  font-family: "rennerLight";
+  list-style-type: disc;
+  padding-left: 30px;
+  font-size: 16px;
+}
+#about .about-wrapper .about-card-2 ul li {
+  margin-block: 10px;
+}
+#about .about-wrapper .img img {
+  width: 75%;
+}
+#about .about-wrapper-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding-right: 11.6%;
+  margin-top: 10%;
+}
+#about .about-wrapper-2 .stats-card {
+  background: var(--white);
+  color: var(--black);
+  padding: 30px;
+}
+#about .about-wrapper-2 .stats-card p:first-child {
+  font-family: "rennerBold";
+  font-size: 24px;
+}
+#about .about-wrapper-2 .stats-card p:last-child {
+  font-family: "rennerLight";
+  font-size: 16px;
+}
+#about .about-wrapper-2 .slider {
+  grid-column: span 2;
+  background: var(--orange);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#about .about-wrapper-2 .slider p:first-child {
+  font-family: "rennerBold";
+  font-size: 24px;
+}
+#about .about-wrapper-2 .slider a {
+  color: var(--white);
+  text-align: right;
+}
+#about .about-wrapper-2 .slider p:nth-child(3) {
+  font-family: "rennerLight";
+  font-size: 16px;
+}
+#about .about-wrapper-2 .slider .progress-bar {
+  height: 8px;
+  margin-top: 7px;
+  background: #ebcbac;
+  border-radius: 10px;
+}
+#about .about-wrapper-2 .slider .progress-bar .percentage {
+  display: block;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-animation: progress 1500ms ease-in 1;
+          animation: progress 1500ms ease-in 1;
+}
+@-webkit-keyframes progress {
+  from {
+    width: 0;
+  }
+}
+@keyframes progress {
+  from {
+    width: 0;
+  }
+}
+#about .about-wrapper-2 .slider .progress-bar .donations {
+  width: 70%;
+}
+
+#the-mobi .img {
+  width: 100%;
+}
+#the-mobi .img img {
+  width: 100%;
+}
+#the-mobi .text {
+  margin-top: 40px;
+  padding: 40px 10%;
+}
+#the-mobi .text h2 {
+  text-transform: uppercase;
+  font-family: "oswaldBold";
+  color: var(--orange);
+  position: relative;
+}
+#the-mobi .text h2::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background: var(--orange);
+  display: block;
+  position: absolute;
+  left: 7rem;
+  top: 50%;
+  transform: translateY(50%);
+}
+#the-mobi .text p {
+  font-size: 15px;
+}
+#the-mobi .text p:nth-child(2) {
+  margin-block: 30px;
+}
+
+#aims {
+  padding: 80px 10%;
+  margin-top: 10%;
+  color: var(--white);
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  justify-content: space-between;
+}
+#aims .quote {
+  width: 90%;
+  background: var(--orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10% 5%;
+  position: relative;
+  text-align: left;
+  gap: 40px;
+}
+#aims .quote svg {
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
+}
+#aims .quote p:nth-child(2) {
+  font-family: "rennerBold";
+  font-size: 40px;
+  color: var(--black);
+}
+#aims .quote p:nth-child(2) span {
+  color: var(--white);
+}
+#aims .quote p:last-child {
+  position: absolute;
+  bottom: 4rem;
+  left: 4rem;
+}
+#aims .text {
+  width: 100%;
+}
+#aims .text h2 {
+  text-transform: uppercase;
+  font-family: "oswaldBold";
+  color: var(--orange);
+  position: relative;
+}
+#aims .text h2::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background: var(--orange);
+  display: block;
+  position: absolute;
+  left: 12rem;
+  top: 50%;
+  transform: translateY(50%);
+}
+#aims .text p {
+  padding-top: 20px;
+  font-family: "rennerLight";
+  font-size: 15px;
+  line-height: 0.7cm;
+}
+
+#donors {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  padding: 80px 10%;
+}
+#donors .donations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#donors .donations h2 {
+  width: 100%;
+  text-align: center;
+  gap: 10%;
+  font-size: 80px;
+  font-family: "rennerMedium";
+  color: var(--orange);
+}
+#donors .donations .don-text {
+  width: 100%;
+}
+#donors .donations .don-text h3 {
+  font-family: "rennerSemiBold";
+  font-size: 15px;
+}
+#donors .donations .don-text ul {
+  margin-block: 20px;
+}
+#donors .donations .don-text ul li {
+  font-family: "rennerLight";
+  font-size: 15.5px;
+  margin-block: 4px;
+}
+#donors .donations .don-text p {
+  font-family: "rennerLight";
+  font-size: 15.5px;
+}
+#donors .partners {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#donors .partners img {
+  width: 90%;
+}
+
+footer {
+  padding: 80px 10%;
+  color: var(--white);
+  background: var(--black);
+}
+footer .wrapper-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-column-gap: 10%;
+  padding-bottom: 50px;
+  border-bottom: 2px solid rgba(133, 133, 133, 0.2431372549);
+}
+footer .wrapper-1 .content h3 {
+  text-transform: uppercase;
+  font-family: "rennerSemiBold";
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+footer .wrapper-1 .content p {
+  font-size: 15px;
+}
+footer .wrapper-1 .content p a {
+  color: var(--white);
+}
+footer .wrapper-1 .content ul {
+  display: flex;
+  gap: 40px;
+}
+footer .wrapper-1 .content ul li a {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 15px;
+}
+footer .wrapper-2 {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .wrapper-2 .social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+footer .wrapper-2 .social-links svg path {
+  fill: var(--white);
+}
+
+@media screen and (max-width: 1200px) {
+  #about {
+    padding-left: 100px;
+  }
+  #about .about-card-1 {
+    left: 6rem;
+    width: 550px;
+  }
+  #about .about-card-1 p:first-child {
+    font-size: 24px;
+  }
+  #the-mobi .text {
+    padding: 40px 10%;
+  }
+  #aims {
+    padding: 80px 7%;
+    gap: 80px;
+  }
+  #aims .quote {
+    width: 120%;
+  }
+  #aims .text p {
+    padding-top: 10px;
+    line-height: 0.6cm;
+  }
+  footer .wrapper-1 {
+    grid-column-gap: 4%;
+  }
+  footer .wrapper-1 .content ul {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  #aims {
+    gap: 60px;
+  }
+  #aims .quote p:nth-child(2) {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 992px) {
+  header {
+    justify-content: space-between;
+    position: relative;
+  }
+  header .logo {
+    width: 30%;
+  }
+  header ul {
+    display: none;
+  }
+  header .navActive {
+    display: block;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    bottom: -28.5rem;
+    width: 100%;
+    text-align: center;
+    background: white;
+    transition: 0.5s ease-in-out;
+    padding-top: 30px;
+  }
+  header .navActive li {
+    margin: 20px;
+  }
+  header .navActive li a {
+    font-size: 20px;
+  }
+  header .navActive li .active {
+    color: var(--black);
+  }
+  header .menu {
+    display: block;
+  }
+  #about .about-card-1 {
+    position: static;
+    width: 630px;
+  }
+  #about .about-wrapper .about-card-2 {
+    margin-top: 0;
+  }
+  #about .about-wrapper-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  #aims {
+    flex-direction: column;
+  }
+  #aims .quote {
+    width: 80%;
+    padding: 13% 5%;
+  }
+  #aims .quote p:last-child {
+    left: 5rem;
+    bottom: 3rem;
+  }
+  #donors {
+    padding: 80px 5%;
+  }
+  #donors .donations h2 {
+    font-size: 70px;
+  }
+  #donors .partners {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #donors .partners #probrands {
+    grid-column-start: -4;
+  }
+  footer .wrapper-1 {
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .wrapper-1 .content:last-child {
+    margin-top: 50px;
+    grid-column: span 2;
+  }
+  footer .wrapper-1 .content:last-child ul {
+    gap: 60px;
+  }
+  footer .wrapper-2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .wrapper-2 .social-links svg {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 770px) {
+  #about .about-card-1 {
+    width: 590px;
+  }
+}
+@media screen and (max-width: 765px) {
+  #about {
+    padding: 80px 30px;
+    padding-left: auto;
+  }
+  #about .about-card-1 {
+    width: 100%;
+  }
+  #about .about-wrapper {
+    justify-content: center;
+  }
+  #about .about-wrapper .img img {
+    width: 100%;
+  }
+  #about .about-wrapper-2 {
+    padding-right: 0;
+  }
+  #donors .donations {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    padding-left: auto;
+    padding: 0 40px;
+  }
+  #hero img {
+    display: none;
+  }
+  #about .about-card-1 {
+    padding: 40px 30px;
+  }
+  #about .about-card-1 p:last-child {
+    margin-top: 30px;
+  }
+  #about .about-wrapper {
+    flex-direction: column;
+  }
+  #about .about-wrapper .img {
+    display: none;
+  }
+  #about .about-wrapper-2 {
+    gap: 20px;
+  }
+  #about .about-wrapper-2 .stats-card {
+    padding: 20px;
+  }
+  #about .about-wrapper-2 .stats-card p:last-child {
+    font-size: 14px;
+  }
+  #about .about-wrapper-2 .slider p:nth-child(3) {
+    font-size: 14px;
+  }
+  #aims .quote {
+    width: 100%;
+  }
+  #aims .quote p:nth-child(2) {
+    font-size: 30px;
+  }
+  #aims .quote svg, #aims .quote p:last-child {
+    position: static;
+  }
+  footer .wrapper-1 {
+    grid-template-columns: 1fr;
+  }
+  footer .wrapper-1 .content:nth-child(2) {
+    margin-top: 50px;
+  }
+  footer .wrapper-1 .content:last-child {
+    grid-column: span 1;
+  }
+  footer .wrapper-1 .content:last-child ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .wrapper-1 .content:last-child ul li a {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=style.css.map */
